@@ -1,0 +1,43 @@
+{
+  "name": "nathanrharris/wordpress",
+  "description": "Portfolio site",
+  "type": "project",
+  "license": "GPL",
+  "authors": [
+      {
+          "name": "Nathan Harris",
+          "email": "nathan@nrhworks.com"
+      }
+  ],
+  "require": {
+      "johnpbloch/wordpress": "^6.4"
+  },
+  "config": {
+      "allow-plugins": {
+          "johnpbloch/wordpress-core-installer": true
+      }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org",
+      "only": [
+        "wpackagist-plugin/*",
+        "wpackagist-theme/*"
+      ]
+    }
+  ],
+  "extra": {
+      "installer-paths": {
+          "wordpress/wp-content/mu-plugins/{$name}/": [
+              "type:wordpress-muplugin"
+          ],
+         "wordpress/wp-content/plugins/{$name}/": [
+              "type:wordpress-plugin"
+          ],
+         "wordpress/wp-content/themes/{$name}/": [
+              "type:wordpress-theme"
+          ]
+      }
+  }
+}
