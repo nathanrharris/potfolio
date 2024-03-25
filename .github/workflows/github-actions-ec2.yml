@@ -25,8 +25,9 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
 
               # Now we have got the access of EC2 and we will start the deploy .
+              touch it-worked-1.txt && 
               cd $TARGET_DIR &&
-              git pull origin main &&
-              touch 'it-worked.txt 
+              touch it-worked-2.txt &&
+              git pull origin main 
               '
             
