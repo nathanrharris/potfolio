@@ -28,6 +28,6 @@ jobs:
               git pull origin main && 
               composer install &&
               docker-compose down &&
-              docker-composer up
+              docker-compose up
               '
             
