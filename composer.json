@@ -39,5 +39,10 @@
               "type:wordpress-theme"
           ]
       }
-  }
+  },
+  "scripts": {
+        "post-install-cmd": [
+            "./docker-wordpress/add-wp-config.sh"
+        ]
+    }
 }

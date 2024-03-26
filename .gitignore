@@ -1,6 +1,12 @@
 # Exclude composer dependencies in the vendor directory
 /vendor
 
+# Exclude Database files
+/dbdata
+
+# Exclude wordpress config
+/docker-wordpress/wp-config.php
+
 # Exclude WordPress core
 /wordpress/*
 /wordpress/wp-includes/
