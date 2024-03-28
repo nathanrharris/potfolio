@@ -1,0 +1,188 @@
+.home {
+  #portfolio-slider-wrapper {
+    position: relative;
+    width: 100%;
+
+    .arrow {
+      font-size: 36px;
+      padding-top: 160px;
+
+      @include breakpoint($screen-md) {
+        padding-top: 180px;
+      }
+    }
+
+    h3.screenshot-header {
+      max-width: 100%;
+      margin-top: 0px;
+      margin-bottom: -20px;
+      position:relative;
+
+      @extend %project__screenshot__header;
+    }
+
+    .screenshot-title {
+      position: absolute;
+      width: 100%;
+      z-index:999;
+    }
+
+    .screenshot-url {
+      position: absolute;
+      z-index: 800;
+      width: 80%;
+      left: 50%;
+      margin-left: -40%;
+      //margin-top: -15px;
+      margin-top: 66%;
+      padding: 0px 25px;
+
+      text-align: center;
+
+      border: 1px solid #000;
+      background-color: #eeeebb;
+
+      -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+      @extend %project__screenshot__url;
+
+      @include breakpoint($screen-sm) {
+        width: auto;
+        left: 2%;
+        margin-left: 30px;
+        //margin-top: 195px;
+        padding: 0px 15px;
+      }
+
+      @include breakpoint($screen-md) {
+        //margin-top: 320px;
+        margin-left: 40px;
+        padding: 0px 25px;
+      }
+
+      @include breakpoint($screen-lg) {
+        //margin-top: 385px;
+      }
+    }
+
+    #portfolio-item-1 {
+      display: block;
+      left: 15px;
+      opacity: 1;
+    }
+
+    .portfolio-item {
+      position: absolute;
+      left: 100%;
+      width: 100%;
+      opacity: 0;
+
+      img.screenshot {
+        position: absolute;
+        height: auto;
+        z-index: 100;
+        top: 20px;
+        background-size: cover;
+        width: 90%;
+
+        @include breakpoint($screen-md) {
+          left: 5%;
+        }
+      }
+
+      img.screenshot_two {
+        height: auto;
+        position: absolute;
+        z-index: 100;
+        top: 35px;
+        left: 5%;
+        width: 66%;
+        background-size: cover;
+      }
+
+      img.screenshot_two_second {
+        height: auto;
+        position: absolute;
+        z-index: 100;
+        top: 140px;
+        left: calc(33% - 24px);
+        width: 66%;
+        background-size: cover;
+      }
+
+      .screenshot-url a {
+        color: #000;
+      }
+    }
+  }
+
+  .arrow {
+    img {
+      width: 50px;
+      height: auto;
+
+      @include breakpoint($screen-md) {
+        width: auto;
+      }
+    }
+  }
+}
+
+.portfolio-details {
+  padding-top: 20px;
+  margin-right: 20px;
+  padding-right: 0px;
+  margin-left: -20px;
+
+  @include breakpoint($screen-md) {
+    margin-left: -40px;
+    margin-right: 40px;
+  }
+}
+
+.portfolio-details-item {
+  h4 {
+    margin-top: 12px;
+    margin-bottom: 6px;
+  }
+
+  ul {
+    padding-left: 24px;
+  }
+
+  p, li {
+    font-weight: 500;
+  }
+}
+
+.portfolio-details-item.role {
+  background-image: url('../images/role-bg.png');
+  background-size: 100% 100%;
+
+  padding: 8px 12px 16px 24px;
+
+  @include breakpoint($screen-md) {
+    padding: 8px 32px 16px 32px;
+  }
+}
+
+.portfolio-details-item.tasks {
+  padding: 8px 24px 40px 32px;
+  background-image: url('../images/tasks-bg.png');
+  background-size: 100% 100%;
+  min-height: 175px;
+}
+
+.portfolio-details-item.tech {
+  padding: 38px 24px 16px 32px;
+  background-image: url('../images/tech-bg.png');
+  background-size: 100% 100%;
+  margin-top: -28px;
+  min-height: 200px;
+}
+
+.right-arrow {
+  padding-left: 0px;
+}

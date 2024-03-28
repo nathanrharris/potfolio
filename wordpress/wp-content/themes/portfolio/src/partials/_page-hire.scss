@@ -1,0 +1,35 @@
+.page-template-hire {
+
+  #body-wrapper {
+    background-image: url(../images/hire-overlay.png);
+    background-size: 100% 100%;
+    background-position: center center;
+
+    @include breakpoint($screen-sm) {
+      background-size: 100% auto;
+    }
+  }
+
+  #contact-me-form {
+    margin-top: 72px;
+    margin-bottom: 24px;
+
+    @include breakpoint($screen-sm) {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+
+  .hire-page-bg {
+    background-image: url(../images/front-hire-bg.png);
+    background-size: 100% 100%;
+    padding: 14px 24px 24px 24px;
+
+    height: auto;
+
+    @include breakpoint($screen-sm) {
+      height: 620px;
+      padding-bottom: 0px;
+    }
+  }
+}

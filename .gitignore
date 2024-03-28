@@ -19,7 +19,7 @@
 ## Themes: include the directory, exclude all subdirectories except those specified
 !/wordpress/wp-content/themes/
 /wordpress/wp-content/themes/*
-!/wordpress/wp-content/themes/deliciousbrains
+!/wordpress/wp-content/themes/portfolio
 # Include custom themes here
 
 ## Plugins: include the directory, exclude all subdirectories except those specified

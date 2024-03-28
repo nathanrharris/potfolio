@@ -1,0 +1,17 @@
+/*
+body {
+  border-top: 5px solid red;
+
+  @include breakpoint($screen-sm) {
+    border-top: 5px solid yellow;
+  }
+
+  @include breakpoint($screen-md) {
+    border-top: 5px solid green;
+  }
+
+  @include breakpoint($screen-lg) {
+    border-top: 5px solid blue;
+  }
+}
+*/

@@ -1,0 +1,206 @@
+.single-project {
+
+  #portfolio-mobile-nav {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: $blue;
+    margin-top: 15px;
+    font-family: 'Boogaloo';
+    text-align: center;
+
+    .arrow {
+      font-size: 18px;
+    }
+
+    .arrow.right {
+      display: inline-block;
+      -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+      -moz-transform: matrix(-1, 0, 0, 1, 0, 0);
+      -o-transform: matrix(-1, 0, 0, 1, 0, 0);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+    }
+  }
+
+  #project-wrapper {
+    .arrow {
+      font-size: 36px;
+      padding-top: 160px;
+
+      @include breakpoint($screen-md) {
+        padding-top: 200px;
+      }
+
+      @include breakpoint($screen-lg) {
+        padding-top: 240px;
+      }
+    }
+  }
+
+  .project-screenshot-large {
+    .screenshot-title {
+
+      h3.screenshot-header {
+        max-width: 100%;
+        margin-top: 27px;
+        margin-bottom: -20px;
+        position:relative;
+
+        @extend %project__screenshot__header;
+
+        @include breakpoint($screen-md) {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      background-size: cover;
+    }
+
+    .screenshot-url {
+      position: absolute;
+      z-index: 800;
+      width: 80%;
+      left: 50%;
+      margin-left: -40%;
+      margin-top: -15px;
+      padding: 0px 25px;
+
+      text-align: center;
+
+      border: 1px solid #000;
+      background-color: #eeeebb;
+
+      -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      -moz-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+      @extend %project__screenshot__url;
+
+      @include breakpoint($screen-sm) {
+        width: auto;
+        left: 7%;
+        margin-left: 0;
+        padding: 0px 25px;
+      }
+    }
+  }
+
+  .project-screenshot-small {
+    padding-top: 48px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      background-size: cover;
+    }
+  }
+
+  .role {
+    margin-top: 50px;
+
+    @include breakpoint($screen-sm) {
+      margin-top: 0px;
+    }
+  }
+
+  @include breakpoint($screen-sm) {
+    .details {
+      padding-top: 50px;
+    }
+  }
+
+  .details {
+    ul {
+      padding-left: 15px;
+    }
+  }
+
+  .role {
+    background-image: url('../images/interior-role-bg.png');
+    background-size: 100% 100%;
+    width: 100%;
+    min-height: 250px;
+    height: auto;
+    margin-top: 36px;
+    padding-top: 6px;
+    padding-left: 36px;
+    padding-right: 36px;
+    background-repeat: no-repeat;
+
+    @include breakpoint($screen-sm) {
+      height: 250px;
+      width: 230px;
+      background-size: calc(100% - 24px) 100%;
+      background-position: 8px;
+    }
+
+    @include breakpoint($screen-md) {
+      width: 340px;
+    }
+
+    @include breakpoint($screen-lg) {
+      width: 500px;
+    }
+  }
+
+  .tasks {
+    background-image: url('../images/interior-role-bg.png');
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    margin-top: 18px;
+    padding-top: 6px;
+    padding-left: 48px;
+    background-repeat: no-repeat;
+
+    @include breakpoint($screen-sm) {
+      background-image: url('../images/interior-task-bg.png');
+      width: 190px;
+      height: 250px;
+      margin-top: 36px;
+      padding-left: 24px;
+    }
+
+    @include breakpoint($screen-md) {
+      width: 270px;
+    }
+  }
+
+  .tech {
+    background-image: url('../images/interior-role-bg.png');
+    background-size: 100% 100%;
+    width: 100%;
+    height: auto;
+    min-height: 250px;
+    margin-top: 18px;
+    padding-top: 6px;
+    padding-left: 48px;
+    background-repeat: no-repeat;
+
+    @include breakpoint($screen-sm) {
+      background-image: url('../images/interior-tech-bg.png');
+      width: 190px;
+      height: 250px;
+      margin-top: 36px;
+    }
+  }
+
+  #project-prev-slide, #project-next-slide {
+    img {
+      width: 50px;
+      height: auto;
+
+      @include breakpoint($screen-md) {
+        width: 71px;
+      }
+    }
+  }
+}

@@ -1,0 +1,279 @@
+<?php get_header(); ?>
+
+<?php
+
+$ids = array();
+
+if ( have_posts() ) {
+  while ( have_posts() ) {
+    the_post();
+
+    $id = get_the_ID();
+
+    $screenshot   = get_field('screenshot_1');
+    $screenshot_2 = get_field('screenshot_2');
+    $screenshot_3 = get_field('screenshot_3');
+
+    $url = get_field('url');
+
+    $client               = get_the_terms(get_the_ID(), 'client');
+    $team                 = get_the_terms(get_the_ID(), 'team');
+    $project_description  = get_the_terms(get_the_ID(), 'project_description');
+    $tasks                = get_the_terms(get_the_ID(), 'task');
+    $tech                 = get_the_terms(get_the_ID(), 'technology');
+
+    $ids['all'][] = $id;
+
+    foreach ($tech as $t) {
+      $ids[$t->slug][] = $id;
+    }
+
+    $color1 = get_field('color_1');
+    $color2 = get_field('color_2');
+    $color3 = get_field('color_3');
+
+  } // end while
+} // end if
+?>
+
+<div class="clear"></div>
+
+<div class="container">
+  <div class="row">
+    <form id="form-filter" class="skill-filter visible-xs">
+      <select id="portfolio-form-filter-select">
+        <option value="all">All</option>
+        <option value="drupal">Drupal</option>
+        <option value="wordpress">Wordpress</option>
+        <option value="php">PHP</option>
+        <option value="ecommerce">Ecommerce</option>
+        <option value="multilingual">Multilingual</option>
+        <option value="theming">Theming</option>
+        <option value="sasscompass">Sass</option>
+        <option value="bootstrap">Bootstrap</option>
+      </select>
+    </form>
+    <ul id="filter" class="hidden-xs">
+      <li><a href="#" class="project-filter" id="all">All</a></li>
+      <li><a href="#" class="project-filter" id="drupal">Drupal</a></li>
+      <li><a href="#" class="project-filter" id="wordpress">Wordpress</a></li>
+      <li><a href="#" class="project-filter" id="php">PHP</a></li>
+      <li><a href="#" class="project-filter" id="ecommerce">Ecommerce</a></li>
+      <li><a href="#" class="project-filter" id="multilingual">Multilingual</a></li>
+      <li><a href="#" class="project-filter" id="theming">Theming</a></li>
+      <li><a href="#" class="project-filter" id="sasscompass">Sass</a></li>
+      <li><a href="#" class="project-filter" id="bootstrap">Bootstrap</a></li>
+    </li>
+  </div>
+</div>
+
+<div id="page-wrapper">
+<div id="projects-wrapper" class="container">
+
+  <div class="project-item project-item-load container" id="project-item-<?php print $id; ?>">
+    <div class="col-sm-1 arrow hidden-xs"> <a href="#" onclick="project_prev_slide()" style="color: <?php print $color1; ?>;">&#9664;</a> </div>
+    <div class="col-xs-12 col-sm-10">
+      <div class="container-fluid">
+        <div class="col-sm-8 project-screenshot-large">
+              <div class="screenshot-title">
+                <h3   class="portfolio-header"
+                      style=" -webkit-text-stroke: <?php print $color1; ?> 2px;
+                              <?php if (strlen(get_the_title()) > 20) { print " font-size: 50px; margin-top: 10px; "; } ?>
+                              background-image: -webkit-linear-gradient(<?php print $color2; ?>, <?php print $color2; ?>, <?php print $color3; ?>, <?php print $color3; ?>);"
+                      data-text="<?php print strtoupper(get_the_title()); ?>"><?php print strtoupper(get_the_title()); ?></h3>
+              </div>
+              <img style="background-image: url(<?php print $screenshot['sizes']['portfolio_full']; ?>);" src="<?php print get_template_directory_uri(); ?>/images/border-1.png" class="screenshot" />
+
+
+              <?php if (isset($url) && $url != '') : ?>
+              <div class="screenshot-url"><a href="http://<?php print $url; ?>" target="_blank"><?php print $url; ?></a></div>
+              <?php endif; ?>
+        </div>
+        <div class="col-sm-4 project-screenshots-small">
+          <?php if (isset($screenshot_2['sizes'])) : ?>
+          <img style="background-image: url(<?php print $screenshot_2['sizes']['portfolio_thumb_small']; ?>);" src="<?php print get_template_directory_uri(); ?>/images/border-2.png" class="project-screenshot project-screenshot-1" />
+          <?php endif; ?>
+          <?php if (isset($screenshot_3['sizes'])) : ?>
+          <br /><br />
+          <img style="background-image: url(<?php print $screenshot_3['sizes']['portfolio_thumb_small']; ?>);" src="<?php print get_template_directory_uri(); ?>/images/border-3.png" class="project-screenshot project-screenshot-2" />
+          <?php endif; ?>
+        </div>
+        <div class="col-sm-5 role">
+          <h4>My Role</h4>
+          <p>
+            <?php
+                if (isset($client[0])) {
+                  print "On this project, I worked as a contractor for {$client[0]->name}.";
+                } else {
+                  print "On this project, I worked directly with the client.";
+                }
+            ?>
+            <?php
+                if (isset($team[0])) {
+                  print "{$team[0]->name} that ";
+                } else {
+                  print "I worked alone and ";
+                }
+            ?>
+            <?php
+                if (isset($project_description[0])) {
+                    print " {$project_description[0]->name} ";
+                }
+            ?>
+          </p>
+        </div>
+        <div class="col-sm-4 tasks">
+          <h4>Tasks</h4>
+          <ul>
+            <?php foreach ($tasks as $k => $t) : ?>
+              <li><?php print $t->name; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <div class="col-sm-3 tech">
+          <h4>Tech</h4>
+          <ul>
+            <?php foreach ($tech as $t) : ?>
+              <li><?php print $t->name; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1 arrow hidden-xs"> <a href="#" onclick="project_next_slide()" style="color: <?php print $color1; ?>;">&#9654;</a> </div>
+  </div>
+
+<?php
+  $args = array('post_type' => 'project', 'posts_per_page' => -1, 'post__not_in' => array($id));
+  $the_query = new WP_Query($args);
+
+  $count = 0;
+
+  while ($the_query->have_posts()) :
+    $the_query->the_post();
+    $count += 1;
+
+    $id = get_the_ID();
+
+    $screenshot   = get_field('screenshot_1');
+    $screenshot_2 = get_field('screenshot_2');
+    $screenshot_3 = get_field('screenshot_3');
+
+    $url = get_field('url');
+
+    $client               = get_the_terms(get_the_ID(), 'client');
+    $team                 = get_the_terms(get_the_ID(), 'team');
+    $project_description  = get_the_terms(get_the_ID(), 'project_description');
+    $tasks                = get_the_terms(get_the_ID(), 'task');
+    $tech                 = get_the_terms(get_the_ID(), 'technology');
+
+    $ids['all'][] = $id;
+
+    foreach ($tech as $t) {
+      $ids[$t->slug][] = $id;
+    }
+
+    $color1 = get_field('color_1');
+    $color2 = get_field('color_2');
+    $color3 = get_field('color_3');
+?>
+
+  <div class="project-item container" id="project-item-<?php print $id; ?>">
+    <div class="col-sm-1 arrow"> <a href="#" onclick="project_prev_slide()" style="color: <?php print $color1; ?>;">&#9664;</a> </div>
+    <div class="col-sm-10">
+      <div class="container-fluid">
+        <div class="col-sm-8 project-screenshot-large">
+              <div class="screenshot-title">
+                <h3   class="portfolio-header"
+                      style=" -webkit-text-stroke: <?php print $color1; ?> 2px;
+                              <?php if (strlen(get_the_title()) > 20) { print " font-size: 50px; margin-top: 10px; "; } ?>
+                              background-image: -webkit-linear-gradient(<?php print $color2; ?>, <?php print $color2; ?>, <?php print $color3; ?>, <?php print $color3; ?>);"
+                      data-text="<?php print strtoupper(get_the_title()); ?>"><?php print strtoupper(get_the_title()); ?></h3>
+              </div>
+              <img style="background-image: url(<?php print $screenshot['sizes']['portfolio_full']; ?>);" src="<?php print get_template_directory_uri(); ?>/images/border-1.png" class="screenshot" />
+
+
+              <?php if (isset($url) && $url != '') : ?>
+              <div class="screenshot-url"><a href="http://<?php print $url; ?>" target="_blank"><?php print $url; ?></a></div>
+              <?php endif; ?>
+        </div>
+        <div class="col-sm-4 project-screenshots-small">
+          <?php if (isset($screenshot_2['sizes'])) : ?>
+          <img style="background-image: url(<?php print $screenshot_2['sizes']['portfolio_thumb_small']; ?>);" src="<?php print get_template_directory_uri(); ?>/images/border-2.png" class="project-screenshot project-screenshot-1" />
+          <?php endif; ?>
+          <?php if (isset($screenshot_3['sizes'])) : ?>
+          <br /><br />
+          <img style="background-image: url(<?php print $screenshot_3['sizes']['portfolio_thumb_small']; ?>);" src="<?php print get_template_directory_uri(); ?>/images/border-3.png" class="project-screenshot project-screenshot-2" />
+          <?php endif; ?>
+        </div>
+        <div class="col-sm-5 role">
+          <h4>My Role</h4>
+          <p>
+            <?php
+                if (isset($client[0])) {
+                  print "On this project, I worked as a contractor for {$client[0]->name}.";
+                } else {
+                  print "On this project, I worked directly with the client.";
+                }
+            ?>
+            <?php
+                if (isset($team[0])) {
+                  print "{$team[0]->name} that ";
+                } else {
+                  print "I worked alone and ";
+                }
+            ?>
+            <?php
+                if (isset($project_description[0])) {
+                    print " {$project_description[0]->name} ";
+                }
+            ?>
+          </p>
+        </div>
+        <div class="col-sm-4 tasks">
+          <h4>Tasks</h4>
+          <ul>
+            <?php foreach ($tasks as $k => $t) : ?>
+              <li><?php print $t->name; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+        <div class="col-sm-3 tech">
+          <h4>Tech</h4>
+          <ul>
+            <?php foreach ($tech as $t) : ?>
+              <li><?php print $t->name; ?></li>
+            <?php endforeach; ?>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1 arrow"> <a href="#" onclick="project_next_slide()" style="color: <?php print $color1; ?>;">&#9654;</a> </div>
+  </div>
+<?php endwhile; ?>
+
+</div>
+</div>
+
+<h4 class="front-page-view"><a href="/portfolio"><span style="font-family: arial; font-size: 24px; position: relative; top: -5px;">&#9664;</span>  View Full Portfolio</a></h4>
+
+<script type="text/javascript">
+
+  <?php foreach ($ids as $group => $list) : ?>
+    var project_slides_<?php print $group; ?> = ["<?php print join('","', $list); ?>"];
+  <?php endforeach; ?>
+
+  <?php
+    if (isset($_COOKIE['filter'])) {
+      $starting_slug = $_COOKIE['filter'];
+    } else {
+      $starting_slug = 'all';
+    }
+  ?>
+
+  var project_slides = project_slides_<?php print $starting_slug; ?>;
+  var filter_slug = '<?php print $starting_slug; ?>';
+
+</script>
+
+<?php get_footer(); ?>

@@ -1,0 +1,53 @@
+body {
+  min-height: 100vh;
+  overflow: auto;
+  position: relative;
+
+  @media (max-width: 350px) {
+    background-image: url(../images/home-about-bg.jpg);
+  }
+
+  &.single-project,
+  &.page-template-skills,
+  &.page-template-portfolio,
+  &.page-template-hire {
+    background-image: url('../images/interior-page-bg.png');
+    background-size: 100% auto;
+    background-position: 0px 130px;
+  }
+
+  #body-wrapper {
+    padding-bottom: 150px;
+    min-height: 100vh;
+  }
+
+  #interior-header {
+    #interior-header-bg-1, #interior-header-bg-2, #interior-header-bg-3 {
+      height: 150px;
+    }
+
+    #interior-header-bg-1 {
+      background-position-y: 1425px;
+      background-image: url('../images/code-top.png');
+      background-repeat: repeat-y;
+    }
+
+    #interior-header-bg-2 {
+      background-position-y: 955px;
+      background-image: url('../images/code-bw.png');
+      background-position-x: 20%;
+      width: 100%;
+    }
+
+    #interior-header-bg-3 {
+      background-color: black;
+      background-position-y: 700px;
+      background-image: url('../images/code-blur.png');
+      width: 100%;
+    }
+  }
+
+  #footer {
+    display: none;
+  }
+}

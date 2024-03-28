@@ -1,0 +1,103 @@
+.page-template-skills {
+
+  #body-wrapper {
+    background-image: url(../images/skills-overlay.png);
+    background-position: bottom;
+
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+
+
+    @include breakpoint($screen-sm) {
+      background-size: 100% 100%;
+    }
+  }
+
+  .skill {
+    background-image: url('../images/skill-background-third.png');
+    background-size: 100% 100%;
+
+    @include breakpoint($screen-sm) {
+      background-size: 96% 100%;
+    }
+
+    padding: 24px 48px;
+    margin-bottom: 36px;
+    background-repeat: no-repeat;
+    height: auto;
+
+    .skill-description {
+      display: none;
+
+      @include breakpoint($screen-sm) {
+        display: inline;
+      }
+    }
+
+    @media (max-width: 768px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  #pane-drupal, #pane-wordpress {
+    padding: 24px 48px;
+    margin-bottom: 36px;
+
+    background-image: url('../images/skill-background-third-short.png');
+
+    @include breakpoint($screen-sm) {
+      background-image: url('../images/skill-background-half.png');
+    }
+  }
+
+  #pane-database {
+    background-image: url('../images/skill-background-third-short.png');
+
+    @include breakpoint($screen-sm) {
+      background-image: url('../images/skill-background-third.png');
+    }
+  }
+
+
+  #form-filter {
+    margin-bottom: 30px;
+  }
+
+  ul {
+    list-style: none;
+    padding-left: 0px;
+    margin-left: 0px;
+
+    li {
+      list-style: none;
+      padding-left: 0px;
+      margin-left: 0px;
+
+      img.skill-icon {
+        margin-right: 10px;
+        height: 30px;
+        width: 30px;
+      }
+
+      .skill-detail {
+        margin-top: 25px;
+        padding-left: 0px;
+        padding-right: 0px;
+
+        @include breakpoint($screen-sm) {
+          padding-left: 15px;
+          padding-right: 15px;
+        }
+
+        &.last {
+          margin-bottom: 50px;
+        }
+      }
+
+      .skill-list {
+        overflow: auto;
+      }
+    }
+  }
+}

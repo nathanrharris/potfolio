@@ -1,0 +1,62 @@
+.single-project,
+.page-template-portfolio {
+  #body-wrapper {
+    background-image: url(../images/portfolio-overlay.png);
+    background-size: 100% auto;
+    background-repeat: repeat-x;
+    background-position: bottom;
+  }
+
+  #portfolio-grid {
+    width: 290px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .portfolio-screenshot-large, .portfolio-screenshot-small {
+      max-width: 290px;
+      height: auto;
+      background-size: cover;
+      margin-top: 25px;
+    }
+  }
+
+  @include breakpoint(min-width 600px) {
+    #portfolio-grid {
+      width: 600px;
+
+      .portfolio-screenshot-large, .portfolio-screenshot-small {
+        margin-top: 10px;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+  }
+
+  @include breakpoint($screen-sm) {
+    #portfolio-grid {
+      width: 100%;
+
+      .portfolio-screenshot-small {
+        background-size: cover;
+        height: auto;
+        margin-top: 8px;
+        margin-right: 5px;
+        margin-left: 5px;
+        max-width: 290px;
+
+        width: calc(25% - 10px);
+      }
+
+      .portfolio-screenshot-large {
+        background-size: cover;
+        height: auto;
+        margin-top: 10px;
+        margin-right: 5px;
+        margin-left: 5px;
+        max-width: 590px;
+
+        width: calc(50% - 10px);
+      }
+    }
+  }
+}

@@ -1,0 +1,212 @@
+#pane-home {
+  height: 100vh;
+  background-color: $gray-dark;
+
+  video {
+    width: auto;
+    height: 40%;
+
+    @include breakpoint($screen-sm) {
+      width: auto;
+      height: 60%;
+    }
+  }
+
+  .home-about-wrapper {
+    background-image: url('../images/front-about-bg.png');
+    background-size: 100% 100%;
+    margin-top: 2px;
+    padding: 24px 36px 12px;
+
+    @include breakpoint($screen-sm) {
+      background-image: url('../images/front-about-bg-short.png');
+      padding: 24px 36px;
+    }
+
+    @include breakpoint($screen-md) {
+      background-image: url('../images/front-about-bg.png');
+      height: 360px;
+    }
+  }
+
+  @include breakpoint($screen-sm) {
+    height: 100vh;
+  }
+
+  #pane-home-content {
+    position: absolute;
+    background-color: white;
+    background-image: url('../images/home-about-bg.jpg');
+    border-top: 3px solid black;
+    background-size: 100% 100%;
+    width: 100%;
+    padding-top: 75px;
+
+    height: 550px;
+    top: calc(100vh - 550px);
+
+    @extend %home__about__mobile;
+  }
+
+  @include breakpoint($screen-sm) {
+    #pane-home-content {
+      padding-top: 85px;
+
+      height: 680px;
+      top: calc(100vh - 680px);
+    }
+  }
+
+  @include breakpoint($screen-md) {
+    #pane-home-content {
+      padding-top: 125px;
+
+      height: 550px;
+      top: calc(100vh - 550px);
+    }
+  }
+
+  #resumes {
+    z-index: 999;
+    position: relative;
+    padding: 12px 36px 12px 36px;
+    background-size: 100% 100%;
+    margin-top: 12px;
+
+    background-image: url('../images/front-about-bg.png');
+
+    @include breakpoint($screen-sm) {
+      padding: 24px 36px 24px 36px;
+      background-image: url('../images/front-about-bg-short.png');
+      margin-top: 18px;
+    }
+
+    @include breakpoint($screen-md) {
+      background-image: url('../images/role-bg.png');
+      margin-top: 0;
+    }
+
+    center {
+      font-size:18px;
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      margin-left: 0px;
+      margin-top: 0px;
+
+      @include breakpoint($screen-sm) {
+        font-size: 36px;
+      }
+    }
+
+    a {
+      display:inline-block;
+      text-align:center;
+      font-size:16px;
+      font-weight:bold;
+      color:#000;
+      width: 32%;
+
+      img {
+        width: 45px;
+        height: auto;
+
+        @include breakpoint($screen-sm) {
+          width: 60px;
+        }
+
+        @include breakpoint($screen-lg) {
+          width: 75px;
+        }
+      }
+    }
+  }
+
+  #social-networking {
+    height: 100%;
+    width: 100%;
+
+    padding: 12px 36px 12px 36px;
+    margin-top: 12px;
+    background-size: 100% 100%;
+
+    background-image: url('../images/front-about-bg-short.png');
+
+    @include breakpoint($screen-sm) {
+      padding: 24px 36px 42px 36px;
+      margin-top: 18px;
+      background-image: url('../images/front-about-bg.png');
+    }
+
+    @include breakpoint($screen-md) {
+      background-image: url('../images/role-bg.png');
+    }
+
+    font-size: 0;
+
+    h4 {
+      font-size: 32px;
+      margin-bottom: 12px;
+      margin-left: 0px;
+      margin-top: 0px;
+
+      @include breakpoint($screen-sm) {
+        font-size: 36px;
+        margin-bottom: 24px;
+      }
+    }
+
+    a {
+      display:inline-block;
+      text-align:center;
+      font-size:16px;
+      font-weight:bold;
+      color:#000;
+      width: 25%;
+
+      img {
+        height: 36px;
+        width: 36px;
+
+        @include breakpoint($screen-sm) {
+          height: 45px;
+          width: 45px;
+        }
+      }
+    }
+  }
+
+  /*
+  @include breakpoint(max-height 950px) {
+    #resumes {
+      bottom: 20px;
+      margin-left: -152px;
+
+      center {
+        display: none;
+      }
+
+      a {
+        img {
+          width: 75px;
+        }
+      }
+    }
+  }
+  */
+
+  @include breakpoint(max-width 350px) {
+    #resumes {
+      a {
+        font-size: 12px;
+
+        img {
+          width: 50px;
+        }
+      }
+    }
+  }
+}

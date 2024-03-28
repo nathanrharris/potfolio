@@ -1,0 +1,221 @@
+.icon, .title {
+  display: none;
+}
+
+#icon-1 { background-image: url(../images/icon-home-bg.png); }
+#icon-2 { background-image: url(../images/icon-work-bg.png); }
+#icon-3 { background-image: url(../images/icon-skills-bg.png); }
+#icon-4 { background-image: url(../images/icon-hire-bg.png); }
+
+#icons {
+  position: absolute;
+  //top: 60px;
+  //top: calc(40% - 85px);
+
+  top: calc(100vh - 625px);
+
+  left: 50%;
+  margin-left: -130px;
+
+  &.icon-adjust {
+    top: 999px;
+  }
+
+  h1.title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image: url(../images/banner-background-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 140px;
+    width: 260px;
+    padding-top: 35px;
+
+    @extend %menu__header__mobile;
+  }
+}
+
+@include breakpoint($screen-sm) {
+  #icons {
+    position: fixed;
+    top: calc(100vh - 680px);
+
+    margin-top: -40px;
+    margin-left: -375px;
+
+    width: 750px;
+    height: 90px;
+
+    .icon-wrapper {
+      width: calc(25% - 75px);
+      float: left;
+      text-align: center;
+
+      &:nth-child(4), &:nth-child(5) {
+        float: right;
+      }
+
+      .icon {
+        height: 80px;
+        width: 80px;
+        cursor: pointer;
+        background-size: contain;
+
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    h1.title {
+      float: left;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: -35px;
+
+      padding-top: 45px;
+      width: 300px;
+      height: 165px;
+    }
+
+    &.icon-adjust {
+      top: 120px;
+
+      h1.title {
+        padding-top: 60px;
+      }
+    }
+  }
+}
+
+@include breakpoint($screen-md) {
+  #icons {
+    //top: 33%;
+    //top: 60%;
+
+    top: calc(100vh - 550px);
+
+    margin-top: -40px;
+    margin-left: -485px;
+
+    width: 970px;
+    height: 90px;
+
+    .icon-wrapper {
+      width: calc(25% - 100px);
+      float: left;
+      text-align: center;
+
+      &:nth-child(4), &:nth-child(5) {
+        float: right;
+      }
+
+      .icon {
+        height: 100px;
+        width: 100px;
+        cursor: pointer;
+        background-size: contain;
+
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    h1.title {
+      margin-top: -55px;
+      padding-top: 55px;
+      width: 400px;
+      height: 220px;
+      font-size: 72px;
+      line-height: 48px;
+    }
+
+    &.icon-adjust {
+      top: 110px;
+
+      h1.title {
+        padding-top: 75px;
+      }
+    }
+  }
+}
+
+#interior-icons {
+  margin-top: -40px;
+  height: 90px;
+
+  .icon-wrapper {
+    width: calc(25% - 75px);
+    float: left;
+
+    &:nth-child(4), &:nth-child(5) {
+      float: right;
+    }
+
+    .icon {
+      height: 80px;
+      width: 80px;
+      cursor: pointer;
+      background-size: contain;
+
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  h1 {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -75px;
+
+    padding-top: 55px;
+    width: 300px;
+    height: 165px;
+    text-align: center;
+    background-image: url(../images/banner-background-bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+@include breakpoint($screen-sm) {
+  #interior-icons {
+    .icon-wrapper {
+      .icon {
+        height: 80px;
+        width: 80px;
+      }
+    }
+
+    h1 {
+      float: left;
+      margin-left: 0px;
+      margin-right: 0px;
+      margin-top: -35px;
+    }
+  }
+}
+
+@include breakpoint($screen-md) {
+  #interior-icons {
+    margin-top: -50px;
+
+    .icon-wrapper {
+      width: calc(25% - 100px);
+
+      .icon {
+        height: 100px;
+        width: 100px;
+      }
+    }
+
+    h1 {
+      width: 400px;
+      height: 220px;
+      font-size: 72px;
+      padding-top: 82px;
+      margin-top: -55px;
+    }
+  }
+}

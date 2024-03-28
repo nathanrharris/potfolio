@@ -1,0 +1,108 @@
+#pane-skills {
+
+  #pane-skills-overlay {
+    padding-top: 80px !important;
+
+    @include breakpoint($screen-md) {
+      padding-top: 120px !important;
+    }
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  .row {
+    margin-bottom: 12px;
+
+    @include breakpoint($screen-md) {
+      margin-bottom: 50px;
+    }
+
+    @include breakpoint(max-height 1080px) {
+      margin-bottom: 12px
+    }
+  }
+
+  .front-skill {
+
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    background-image: url('../images/front-skill-bg-short.png');
+    padding-top: 1px;
+    height: 340px;
+
+    margin-left: -10px;
+    margin-right: -10px;
+
+    @include breakpoint($screen-md) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    ul {
+      padding-left: 0px;
+
+      margin-left: 24px;
+
+      @include breakpoint($screen-md) {
+        margin-left: 25%;
+      }
+
+      li {
+        list-style-type: none;
+        margin-bottom: 15px;
+        font-weight: bold;
+        font-size: 14px;
+
+        @include breakpoint($screen-md) {
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        img {
+          width: 35px;
+          height: auto;
+          margin-right: 6px;
+
+          @include breakpoint($screen-md) {
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  .front-skills-row:nth-child(2) {
+    .front-skill {
+      background-image: url('../images/front-skill-bg-tall.png');
+      height: 340px;
+
+      @include breakpoint(max-height 1030px) {
+        height: 265px;
+
+        li:nth-child(5) {
+          display: none;
+        }
+      }
+
+      @include breakpoint(max-height 950px) {
+        height: 215px;
+
+        li:nth-child(4) {
+          display: none;
+        }
+      }
+
+      @include breakpoint(max-height 900px) {
+        display: none;
+      }
+    }
+  }
+}
