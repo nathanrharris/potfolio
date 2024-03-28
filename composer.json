@@ -10,12 +10,22 @@
       }
   ],
   "require": {
-      "johnpbloch/wordpress": "^6.4"
+      "johnpbloch/wordpress": "^6.4",
+    "wpackagist-plugin/custom-post-type-ui": "^1.15",
+    "wpackagist-plugin/advanced-custom-fields": "^6.2",
+    "wpackagist-plugin/custom-taxonomy-order-ne": "^4.0",
+    "wpackagist-plugin/post-types-order": "^2.2",
+    "wpackagist-plugin/regenerate-thumbnails": "^3.1",
+    "wpackagist-plugin/wp-file-manager": "^7.2",
+    "wpackagist-plugin/wpforms-lite": "^1.8",
+    "wpackagist-plugin/wp-mail-smtp": "^4.0",
+    "wpengine/advanced-custom-fields-pro": "^6.2"
   },
   "config": {
       "allow-plugins": {
-          "johnpbloch/wordpress-core-installer": true
-      }
+      "johnpbloch/wordpress-core-installer": true,
+      "composer/installers": true
+    }
   },
   "repositories": [
     {
@@ -25,6 +35,10 @@
         "wpackagist-plugin/*",
         "wpackagist-theme/*"
       ]
+    },
+    {
+      "type": "composer",
+      "url": "https://connect.advancedcustomfields.com"
     }
   ],
   "extra": {
@@ -41,8 +55,8 @@
       }
   },
   "scripts": {
-        "post-install-cmd": [
-            "./docker-wordpress/add-wp-config.sh"
-        ]
-    }
+    "post-install-cmd": [
+        "./docker-wordpress/add-wp-config.sh"
+    ]
+  }
 }
