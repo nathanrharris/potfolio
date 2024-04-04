@@ -3,6 +3,7 @@
 
 # Exclude Database files
 /dbdata
+/docker-data
 
 # Exclude wordpress config
 /docker-wordpress/wp-config.php

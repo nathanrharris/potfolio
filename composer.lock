@@ -153,20 +153,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "6.4.3",
+            "version": "6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "b20c2071f4cd609953dbd7ffc97e5201094499f0"
+                "reference": "82689a4520621352f5f036628830eb5d300cf582"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/b20c2071f4cd609953dbd7ffc97e5201094499f0",
-                "reference": "b20c2071f4cd609953dbd7ffc97e5201094499f0",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/82689a4520621352f5f036628830eb5d300cf582",
+                "reference": "82689a4520621352f5f036628830eb5d300cf582",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "6.4.3",
+                "johnpbloch/wordpress-core": "6.5.0",
                 "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
                 "php": ">=7.0.0"
             },
@@ -195,20 +195,20 @@
                 "issues": "https://core.trac.wordpress.org/",
                 "source": "https://core.trac.wordpress.org/browser"
             },
-            "time": "2024-01-30T19:31:18+00:00"
+            "time": "2024-04-02T18:26:54+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "6.4.3",
+            "version": "6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "389a4e72f3e14a995f89fa4bc5a69c7cf75ae2a8"
+                "reference": "e36de3196c8ff7247bb2e654b8827c884a1c2bc0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/389a4e72f3e14a995f89fa4bc5a69c7cf75ae2a8",
-                "reference": "389a4e72f3e14a995f89fa4bc5a69c7cf75ae2a8",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/e36de3196c8ff7247bb2e654b8827c884a1c2bc0",
+                "reference": "e36de3196c8ff7247bb2e654b8827c884a1c2bc0",
                 "shasum": ""
             },
             "require": {
@@ -216,7 +216,7 @@
                 "php": ">=7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "6.4.3"
+                "wordpress/core-implementation": "6.5.0"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -243,7 +243,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2024-01-30T19:31:14+00:00"
+            "time": "2024-04-02T18:26:47+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -373,7 +373,7 @@
         },
         {
             "name": "wpackagist-plugin/wp-file-manager",
-            "version": "7.2.5",
+            "version": "7.2.6",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-file-manager/",
@@ -381,7 +381,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-file-manager.zip?timestamp=1710480591"
+                "url": "https://downloads.wordpress.org/plugin/wp-file-manager.zip?timestamp=1712034538"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -427,10 +427,10 @@
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",
-            "version": "6.2.7",
+            "version": "6.2.8",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?p=pro&t=6.2.7"
+                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?p=pro&t=6.2.8"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
