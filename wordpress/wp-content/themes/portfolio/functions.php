@@ -17,3 +17,5 @@ add_action('wp_enqueue_scripts', 'theme_styles');
 
 add_image_size('portfolio_thumb_small', 290, 228, array('x_crop_position' => 'center', 'y_crop_position' => 'top'));
 add_image_size('portfolio_full', 590, 466, array('x_crop_position' => 'center', 'y_crop_position' => 'top'));
+
+remove_filter('template_redirect','redirect_canonical');
