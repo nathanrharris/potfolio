@@ -28,6 +28,7 @@ jobs:
               git pull origin main && 
               composer install &&
               docker-compose down &&
+              sleep 10 &&
               docker-compose up -d
               '
             
