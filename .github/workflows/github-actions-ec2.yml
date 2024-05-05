@@ -23,11 +23,12 @@ jobs:
         run: |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
           ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOSTNAME} '
-              # Now we have got the access of EC2 and we will start the deploy .
+              # Now we have access of EC2 and we will start the deploy .
               cd /home/ubuntu/portfolio &&
               git pull origin main && 
               composer install &&
               docker-compose down &&
+              sleep 10 &&
               docker-compose up -d
               '
             
