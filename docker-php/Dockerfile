@@ -7,3 +7,5 @@ RUN apk add --virtual build-dependencies --no-cache autoconf gcc g++ make freety
 RUN docker-php-ext-configure gd --enable-gd --with-freetype=/usr/include/freetype2/ --with-jpeg=/usr/include/
 RUN docker-php-ext-install gd
 RUN docker-php-ext-enable gd
+
+RUN apk add --no-cache pcre-dev $PHPIZE_DEPS && pecl install redis && docker-php-ext-enable redis.so

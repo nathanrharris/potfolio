@@ -19,7 +19,8 @@
     "wpackagist-plugin/wp-file-manager": "^7.2",
     "wpackagist-plugin/wpforms-lite": "^1.8",
     "wpackagist-plugin/wp-mail-smtp": "^4.0",
-    "wpengine/advanced-custom-fields-pro": "^6.2"
+    "wpengine/advanced-custom-fields-pro": "^6.2",
+    "wpackagist-plugin/redis-cache": "^2.5"
   },
   "config": {
       "allow-plugins": {
