@@ -153,20 +153,20 @@
         },
         {
             "name": "johnpbloch/wordpress",
-            "version": "6.5.0",
+            "version": "6.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress.git",
-                "reference": "82689a4520621352f5f036628830eb5d300cf582"
+                "reference": "52bffda9c0fc4dfd3c5f6e17f71ddce4fbad6038"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/82689a4520621352f5f036628830eb5d300cf582",
-                "reference": "82689a4520621352f5f036628830eb5d300cf582",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress/zipball/52bffda9c0fc4dfd3c5f6e17f71ddce4fbad6038",
+                "reference": "52bffda9c0fc4dfd3c5f6e17f71ddce4fbad6038",
                 "shasum": ""
             },
             "require": {
-                "johnpbloch/wordpress-core": "6.5.0",
+                "johnpbloch/wordpress-core": "6.5.2",
                 "johnpbloch/wordpress-core-installer": "^1.0 || ^2.0",
                 "php": ">=7.0.0"
             },
@@ -195,20 +195,20 @@
                 "issues": "https://core.trac.wordpress.org/",
                 "source": "https://core.trac.wordpress.org/browser"
             },
-            "time": "2024-04-02T18:26:54+00:00"
+            "time": "2024-04-09T21:21:01+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core",
-            "version": "6.5.0",
+            "version": "6.5.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core.git",
-                "reference": "e36de3196c8ff7247bb2e654b8827c884a1c2bc0"
+                "reference": "bf083fe2944a4683461d496086ec22319cd8bdf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/e36de3196c8ff7247bb2e654b8827c884a1c2bc0",
-                "reference": "e36de3196c8ff7247bb2e654b8827c884a1c2bc0",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core/zipball/bf083fe2944a4683461d496086ec22319cd8bdf1",
+                "reference": "bf083fe2944a4683461d496086ec22319cd8bdf1",
                 "shasum": ""
             },
             "require": {
@@ -216,7 +216,7 @@
                 "php": ">=7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "6.5.0"
+                "wordpress/core-implementation": "6.5.2"
             },
             "type": "wordpress-core",
             "notification-url": "https://packagist.org/downloads/",
@@ -243,7 +243,7 @@
                 "source": "https://core.trac.wordpress.org/browser",
                 "wiki": "https://codex.wordpress.org/"
             },
-            "time": "2024-04-02T18:26:47+00:00"
+            "time": "2024-04-09T21:20:55+00:00"
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
@@ -301,15 +301,15 @@
         },
         {
             "name": "wpackagist-plugin/custom-post-type-ui",
-            "version": "1.15.1",
+            "version": "1.16.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/custom-post-type-ui/",
-                "reference": "tags/1.15.1"
+                "reference": "tags/1.16.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.15.1.zip"
+                "url": "https://downloads.wordpress.org/plugin/custom-post-type-ui.1.16.0.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -337,15 +337,15 @@
         },
         {
             "name": "wpackagist-plugin/post-types-order",
-            "version": "2.2",
+            "version": "2.2.1",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/post-types-order/",
-                "reference": "tags/2.2"
+                "reference": "tags/2.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/post-types-order.2.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/post-types-order.2.2.1.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -409,15 +409,15 @@
         },
         {
             "name": "wpackagist-plugin/wpforms-lite",
-            "version": "1.8.7.2",
+            "version": "1.8.8.3",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wpforms-lite/",
-                "reference": "tags/1.8.7.2"
+                "reference": "tags/1.8.8.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wpforms-lite.1.8.7.2.zip"
+                "url": "https://downloads.wordpress.org/plugin/wpforms-lite.1.8.8.3.zip"
             },
             "require": {
                 "composer/installers": "^1.0 || ^2.0"
@@ -427,10 +427,10 @@
         },
         {
             "name": "wpengine/advanced-custom-fields-pro",
-            "version": "6.2.8",
+            "version": "6.2.9",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?p=pro&t=6.2.8"
+                "url": "https://connect.advancedcustomfields.com/v2/plugins/composer_download?p=pro&t=6.2.9"
             },
             "require": {
                 "composer/installers": "~1.0 || ~2.0"
