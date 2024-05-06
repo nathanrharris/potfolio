@@ -23,7 +23,7 @@ push-data:
 	echo
 	docker exec -i  db /usr/bin/mysqldump -uroot -pp@55w0rd  wordpress | gzip > docker-data/data.local.${TIMESTAMP}.sql.gz
 	echo
-	copy docker-data/data.local.${TIMESTAMP}.sql.gz docker-data/data.latest.sql.gz
+	cp docker-data/data.local.${TIMESTAMP}.sql.gz docker-data/data.latest.sql.gz
 	echo
 	scp docker-data/data.local.${TIMESTAMP}.sql.gz portfolio:portfolio/docker-data/
 	echo
