@@ -20,8 +20,6 @@ services:
     container_name: wordpress
     ports:
       - 8080:80
-    extra_hosts:
-      - "portfolio.local:127.0.0.1"
     volumes:
       - ./wordpress/:/var/www/html/
     networks:
@@ -32,8 +30,6 @@ services:
     container_name: php
     expose:
       - 9000
-    extra_hosts:
-      - "portfolio.local:127.0.0.1"
     volumes:
       - ./wordpress/:/var/www/html/
     networks:
