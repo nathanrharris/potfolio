@@ -29,3 +29,7 @@
 /wordpress/wp-content/plugins/*
 # Include custom plugins here
 
+# Resumes
+!/wordpress/Nathan-Harris-Resume.pdf
+!/wordpress/Nathan-Harris-Drupal-Resume.pdf
+!/wordpress/Nathan-Harris-Wordpress-Resume.pdf
