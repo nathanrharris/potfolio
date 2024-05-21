@@ -68,8 +68,8 @@ ul#filter {
 
     @include breakpoint($screen-lg) {
       li {
-        padding-left: 22px;
-        padding-right: 22px;
+        padding-left: 14px;
+        padding-right: 14px;
       }
 
       li:nth-child(7),
