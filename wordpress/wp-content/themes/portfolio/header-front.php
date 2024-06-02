@@ -9,6 +9,17 @@
 
     <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/portfolio/images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/portfolio/images/favicon-16x16.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0BD44NKNT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-L0BD44NKNT');
+    </script>
+
   </head>
   <body  <?php body_class(); ?>>
     <div id="mobile-menu" class="visible-xs">
