@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bfbeb891fd473470afa0f599e75133a",
+    "content-hash": "eb91f4e1a058fb69bc537d098aa21efa",
     "packages": [
         {
             "name": "composer/installers",
@@ -334,6 +334,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-taxonomy-order-ne/"
+        },
+        {
+            "name": "wpackagist-plugin/png-to-jpg",
+            "version": "4.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/png-to-jpg/",
+                "reference": "tags/4.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/png-to-jpg.4.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/png-to-jpg/"
         },
         {
             "name": "wpackagist-plugin/post-types-order",

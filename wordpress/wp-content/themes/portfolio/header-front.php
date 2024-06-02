@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
     <meta property="og:image" content="http://www.nathanrharris.com/screenshot.png">
-    <meta property="og:description" content="Nathan Harris is a freelance Web Developer, based in Pittsburgh, that specializes in building Drupal and Wordpress applications. This is his portfolio.">
+    <meta property="og:description" content="Welcome to the online resume for Nathan Harris.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/wp-content/themes/portfolio/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/wp-content/themes/portfolio/images/favicon-16x16.png">
   </head>
   <body  <?php body_class(); ?>>
     <div id="mobile-menu" class="visible-xs">

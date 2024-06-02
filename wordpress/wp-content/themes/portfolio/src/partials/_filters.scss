@@ -19,12 +19,24 @@ ul#filter {
   margin-bottom: 25px;
   padding-left: 0px;
   font-size: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 
   li {
     font-family: 'Boogaloo';
     list-style: none;
-    float: left;
     text-align: center;
+    padding: 0px 24px;
+    
+    @include breakpoint($screen-md) {
+      padding: 0px 42px;
+    }
+    
+    @include breakpoint($screen-lg) {
+      padding: 0px;
+    }
 
     a {
       font-size: 32px;
@@ -33,80 +45,8 @@ ul#filter {
 
       &.active {
         color: #a6e1f4;
-         -webkit-text-stroke-width: 1px;
+         -webkit-text-stroke-width: 2px;
          -webkit-text-stroke-color: #555;
-         text-shadow: 1px 1px 1px black;
-      }
-    }
-  }
-
-  &.portfolio-filter, &.project-filter {
-    li {
-      padding: 0 32px 0;
-    }
-
-    li:nth-child(6),
-    li:nth-child(7),
-    li:nth-child(8),
-    li:nth-child(9) {
-      padding: 0 42px 18px;
-    }
-
-
-    @include breakpoint($screen-md) {
-      li {
-        padding: 0 52px 0;
-      }
-
-      li:nth-child(6),
-      li:nth-child(7),
-      li:nth-child(8),
-      li:nth-child(9) {
-        padding: 0 70px 18px;
-      }
-    }
-
-
-
-    @include breakpoint($screen-lg) {
-      li {
-        padding: 0 18px 0;
-      }
-
-      li:nth-child(6),
-      li:nth-child(7),
-      li:nth-child(8),
-      li:nth-child(9) {
-        padding: 0 18px 18px;
-      }
-    }
-  }
-
-  &.skill-filter {
-    li {
-      width: calc(100% / 4);
-      margin-bottom: 18px;
-
-      @include breakpoint($screen-md) {
-        width: calc(100% / 8);
-      }
-    }
-  }
-
-  &.portfolio-filter {
-    li {
-
-      &:nth-child(6) {
-        clear: both;
-      }
-
-      margin-bottom: 18px;
-
-      @include breakpoint($screen-md) {
-        &:nth-child(6) {
-          clear: none;
-        }
-        margin-bottom: 0;
       }
     }
   }
