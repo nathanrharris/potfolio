@@ -1,9 +1,5 @@
 var $j = jQuery.noConflict();
 
-var audio_swoosh = new Audio('/wp-content/themes/portfolio/sounds/220191__gameaudio__space-swoosh-brighter.wav');
-var audio_hit = new Audio('/wp-content/themes/portfolio/sounds/50221__tblo__high-hit.wav');
-var audio_slide = new Audio('/wp-content/themes/portfolio/sounds/171321__swidmark__fast-swoosh.wav');
-
 /************************/
 /*   HOME PAGE          */
 /************************/
@@ -94,7 +90,6 @@ $j(document).ready(function() {
         scrollSpeed: 1000,
         scrollbars: false,
         before:function() {     $j.scrollify.disable();
-                                //audio_swoosh.play();
                                 //$j('.icon, .title').fadeOut(150);
                                 $j('.title').fadeOut(150);
 
@@ -140,7 +135,6 @@ $j(document).ready(function() {
                                 $j('.title').fadeIn(400);
 
                                 setTimeout(function() {
-                                                        //audio_hit.play();
                                                         $j.scrollify.enable();
                                                       }, 1300);
                             },
@@ -204,8 +198,6 @@ function next_slide() {
 
   animating = true;
 
-  //audio_slide.play();
-
   var next_slide = current_slide + 1;
 
   if (next_slide > slide_count) { next_slide = 1; }
@@ -256,8 +248,6 @@ function prev_slide() {
   }
 
   animating = true;
-
-//  audio_slide.play();
 
   var next_slide = current_slide - 1;
 
