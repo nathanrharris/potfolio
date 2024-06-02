@@ -20,6 +20,7 @@
           <div id="pane-portfolio-overlay" class="pane-overlay">
             <?php get_template_part('content', 'front-portfolio'); ?>
             BOOM
+            BOOM
             <h4 class="front-page-view"><a href="/portfolio">More Projects <img src="<?php print get_template_directory_uri(); ?>/images/portfolio-arrow-right.png" /></a></h4>
           </div>
         </div>
