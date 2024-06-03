@@ -6,7 +6,7 @@
           <?php get_template_part('content', 'front-about'); ?>
         </div>
       </div>
-      <video id="home-video" autoplay loop muted>
+      <video id="home-video" autoplay loop muted playsinline>
         <source src="https://s3.us-east-2.amazonaws.com/nathanrharris/screen-saver-foo.mp4">
       </video>
     </div>
