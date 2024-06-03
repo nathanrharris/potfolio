@@ -94,8 +94,10 @@ $j(document).ready(function() {
         scrollSpeed: 1000,
         scrollbars: false,
         before:function() {     $j.scrollify.disable();
-                                //$j('.icon, .title').fadeOut(150);
-                                $j('.title').fadeOut(150);
+                                
+                                if ($j(window).width() >= 768) {
+                                  $j('.title').fadeOut(150);
+                                }
 
                                 $j('#icon-1').animate({'margin-left':'-100px', 'margin-top':'50px', 'height':'0', 'width':'0', 'opacity':'0'}, 100);
                                 $j('#icon-2').animate({'margin-left':'-50px', 'margin-top':'50px', 'height':'0', 'width':'0', 'opacity':'0'}, 100);
@@ -121,22 +123,23 @@ $j(document).ready(function() {
 
                                 $j('#icon-3').animate({'margin-left':'20px', 'margin-top':'0', 'height': icon_size, 'width': icon_size, 'opacity':'1'}, 200);
                                 $j('#icon-4').animate({'margin-left':'20px', 'margin-top':'0', 'height': icon_size, 'width': icon_size, 'opacity':'1'}, 200);
+                            
+                                if ($j(window).width() >= 768) {
+                                  if (id==0) {
+                                    $j('.title').html('<span class="title-name">Nathan<br />Harris</span>');
+                                  }
+                                  if (id==1) {
+                                    $j('.title').html('Portfolio');
+                                  }
+                                  if (id==2) {
+                                    $j('.title').html('Skills');
+                                  }
+                                  if (id==3) {
+                                    $j('.title').html('Hire Me');
+                                  }
 
-
-                                if (id==0) {
-                                  $j('.title').html('<span class="title-name">Nathan<br />Harris</span>');
+                                  $j('.title').fadeIn(400);
                                 }
-                                if (id==1) {
-                                  $j('.title').html('Portfolio');
-                                }
-                                if (id==2) {
-                                  $j('.title').html('Skills');
-                                }
-                                if (id==3) {
-                                  $j('.title').html('Hire Me');
-                                }
-
-                                $j('.title').fadeIn(400);
 
                                 setTimeout(function() {
                                                         $j.scrollify.enable();
@@ -316,7 +319,6 @@ $j(document).ready(function() {
   var sm_group4 = ['#pane-front-end-coding', '#pane-database'];
 
   if ($j(window).width() <= 992) {
-      console.log('resize small');
     nrh_equal_height(sm_group1);
     nrh_equal_height(sm_group2);
     nrh_equal_height(sm_group3);
