@@ -2,12 +2,10 @@
   <div class="row">
     <div class="col-xs-12 col-md-8">
       <div class="home-about-wrapper">
-        <p class="home-home">
         <?php
           $post = get_post(13);
           print $post->post_content;
         ?>
-        </p>
       </div>
     </div>
 
