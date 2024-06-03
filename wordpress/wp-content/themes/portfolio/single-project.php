@@ -41,13 +41,12 @@ if ( have_posts() ) {
 <div class="clear"></div>
 
 <?php 
-
-  $f = '';
-
   if (isset($_COOKIE['filter'])) {
     $f = $_COOKIE['filter']; 
+  } 
+  else {
+    $f = 'all';
   }
-
 ?>
 
 <?php // Find first project for each type
