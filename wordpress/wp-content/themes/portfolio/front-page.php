@@ -8,9 +8,6 @@
       </div>
       <video id="home-video" autoplay loop muted>
         <source src="https://s3.us-east-2.amazonaws.com/nathanrharris/screen-saver-foo.mp4">
-        <?php /* ?>
-        <source src="<?php print get_template_directory_uri(); ?>/videos/me-working.webmsd.webm">
-        <?php */ ?>
       </video>
     </div>
     <div id="pane-portfolio" class="pane hidden-xs">
